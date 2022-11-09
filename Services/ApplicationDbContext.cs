@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using DSLab09Auth.Models.ViewModels;
 
 namespace DSLab09Auth.Services;
 
@@ -11,4 +12,5 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityR
         : base(options)
     {
     }
+    public DbSet<DSLab09Auth.Models.ViewModels.UserListVM> UserListVM { get; set; }
 }
